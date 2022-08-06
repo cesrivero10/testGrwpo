@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/7cd963d4f1.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <title>GRWPO</title>
+
+  <style>
+    body {
+      background: rgb(73,88,209);
+      background: linear-gradient(170deg, rgba(73,88,209,1) 40%, rgba(254,0,0,1) 40%);
+      margin: 0;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      background-color: white;
+    }
+    .logo {
+      width: 48px;
+      position: absolute;
+      top: -12px;
+      left: 178px;     
+    }
+    .navbar ul {
+      list-style:none ;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
+    .fa-bars:before, .fa-navicon:before {
+    color: rgb(212, 10, 10);
+      position: absolute;
+      right: 206px;
+      bottom: 12px;
+    }
+    header li {
+      padding: 12px;
+      font-size: 12px;
+    }
+    .text-center {
+      text-align: center;
+      margin-bottom: 126px;
+      font-family: 'Lato', sans-serif;
+      position: relative;
+    }
+    .text-center h6 {
+      color: white;
+    }
+    .text-center h4 {
+      margin-bottom: -60px;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+    .display-desktop {
+      display: block;
+    }
+    .text-center h4::before {
+      content: " ";
+      width: 60px;
+      height: 1px;
+      background-color: black;
+      border: 19;
+      position: absolute;
+      top: 46px;
+      right: 302px;
+    }
+    .text-center h4::after {
+      content: " ";
+      width: 60px;
+      height: 1px;
+      background-color: black;
+      border: 19;
+      position: absolute;
+      top: 46px;
+      left: 302px;
+    }
+    .display-mobile {
+      display:none;
+    }
+    .text-center h1 {
+      color:white ;
+      font-size: 70px;
+      font-family: 'Lato', sans-serif;
+    }
+    img {
+      padding: 20px ;
+    }
+    .red {
+      position: absolute;
+      width: 484px;
+      top: 144px;
+      left: 246px;
+    }
+    .main {
+      background-color: white;
+      width: 60%;
+      margin: 0 auto;
+      padding-top: 60px;
+    }
+    .section {
+      margin-right: 40px;
+      margin-left: 40px;
+    }
+    .one {
+      display: flex;
+      justify-content: space-between;
+    }
+    p {
+      margin-bottom: 4px;
+      color: #817575;
+      font-family: 'Lato', sans-serif;
+      font-size: 12px;
+      margin-left: 10px;
+    }
+    #modelo {
+      width: 254px;
+      border: 1px solid red;
+      padding: 5px 9px;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    .text-center-two {
+      text-align: center;
+      margin-top: 44px;
+      font-family: 'Lato', sans-serif;
+      position: relative;
+    }
+    .color-red {
+      color: red;
+      font-size: 38px;
+    }
+    .color-red::before {
+      content: " ";
+      width: 100px;
+      height: 1px;
+      background-color: red;
+      border: 19;
+      position: absolute;
+      top: 28px;
+      left: 14px;
+    }
+    .color-red::after {
+      content: " ";
+      width: 100px;
+      height: 1px;
+      background-color: red;
+      border: 19;
+      position: absolute;
+      top: 28px;
+      right: 14px;
+    }
+    h5 {
+      margin-top: -30px;
+      margin-bottom: 30px;
+      font-size: 8px;
+      font-weight: 200;
+      letter-spacing: 4px;
+    }
+    .two {
+      display: flex;
+      justify-content: space-between;
+    }
+    .label input {
+      border: 1px solid red;
+      padding: 5px 9px;
+    }
+    ::placeholder {
+      color: black;
+      font-weight: bold;
+      font-family: 'Lato', sans-serif;
+    }
+    .two-2 {
+      display: flex;
+    }
+    .two input {
+      width: 144px;     
+    }
+    .two-2 #email {
+      width: 144px;
+    }
+    .two-2 .phone {
+      margin-left: 32px;
+    }
+    .two-2 #number {
+      margin-left: 22px;
+      width: 144px;
+    }
+    #Phone p {
+      margin-left: 10px;
+    }
+    .three-chk p {
+      margin-top: 28px;
+      margin-left: 10px;
+    }
+    .w3-bar.w3-black {
+      display: flex;
+      justify-content: space-between;
+    }
+    .background-red {
+      background-color: red;
+    }
+    .w3-bar-item.w3-button {
+      padding: 5px 9px;
+      width: 100%;
+    }
+    .option {
+      margin-left: 54px;
+    }
+    .w3-bar-item.w3-button.w3-r {
+      margin-left: 50px;
+    }
+    .w3-bar-item.w3-button.w3-s {
+      margin-right: 50px;
+      background-color: red;
+    }
+    .three {
+      display: flex;
+      justify-content: space-between;
+    }
+    .three .cantidad {
+      margin-left: 64px;
+    }
+    .three #number {
+      margin-left: 51px;
+      width: 187px;
+    }
+    .three .plazo {
+      margin-left: 10px;
+    }
+    .three #month {
+      margin-right: 51px;
+      width: 187px;
+    }
+    .eighth label {
+      margin-left: 10px;
+      color: #817575;
+      font-size: 12px;
+    }
+    .eighth .text-center {
+      color: #817575;
+      padding-top: 4px;
+      padding-bottom: 0px;
+    }
+    textarea {
+      border: 1px solid red;
+    }
+    .nineth div {
+      margin-bottom: 80px;
+      font-family: 'Lato', sans-serif;
+    }
+    .nineth .d-final {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+    }
+    .nineth #cbox4 {
+      margin-bottom: 16px;
+    }
+    u {
+      font-weight: bold;
+    }
+    .nineth button {
+      width: 112px;
+      height: 30px;
+      font-weight: bold;
+      font-family: 'Lato', sans-serif;
+    }  
+    button {
+      border: 1px solid red;
+    }
+    @media (max-width: 768px) {
+  .facet_sidebar {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+  }
+  .logo {
+    left: 62px;
+  }
+  .fa-bars:before, .fa-navicon:before {
+    color: rgb(212, 10, 10);
+    right: 84px;
+  }
+  header li {
+    padding: 12px 18px;
+  }
+  .main {
+    width: 80%;
+    margin: 80px;
+    padding-top: 80px;
+  }
+  .text-center h4 {
+    margin-bottom: -60px;
+  }
+  .text-center h4::before {
+    height: 1px;
+    top: 45px;
+    right: 506px;
+  }
+  .text-center h4::after {
+    height: 1px;
+    top: 45px;
+    left: 506px;
+  }
+  .red {
+    position: absolute;
+    width: 480px;
+    top: 160px;
+    left: 126px;
+  }
+  #modelo {
+    width: 254px;
+    padding: 10px;
+    font-size: 12px;
+  }
+  .color-red::after {
+    height: 1px;
+    right: 16px;
+    }
+  .color-red::before {
+    height: 1px;
+    left: 16px;
+  }
+  .lista.cotizar {
+  display: none;
+  }
+  .label input {
+    width: 100%;
+    padding: 10px
+  }
+  #name {
+    width: 130px;
+  }
+  #last-name-father {
+    width: 130px;
+  }
+  #last-name-mother {
+    width: 130px;
+  }
+  .two-2 #email {
+    width: 130px;
+  }
+  .two-2 #number {
+    width: 130px;
+    margin-left: 40px;
+  }
+  .two-2 .phone {
+    margin-left: 40px;
+  }
+  .option {
+    margin-left: 0px;
+  }
+  .w3-bar-item.w3-button {
+      padding: 10px;
+      width: 100%;
+    }
+  .w3-bar-item.w3-button.w3-r {
+    margin-left: 0px;
+  }
+  .w3-bar-item.w3-button.w3-s {
+    margin-right: 0px;
+    background-color: red;
+  }
+  .three { 
+    display: flex;
+    justify-content: space-between;
+  }
+  .three #number {
+    width: 224px;
+    margin-left: 0px;
+  }
+  .three #month {
+    width: 224px;
+    margin-right: 0px;
+  }
+  textarea {
+    width: 528px;
+  }
+  .eighth .text-center {
+    padding-bottom: 0px;
+  }
+  .display-desktop {
+    display: none;
+  }
+  .display-mobile {
+    display: block;
+  }
+}
+
+    @media (max-width: 320px) {
+  .facet_sidebar {
+    display: none;
+  }
+  .navbar .lista{
+    display: none;
+  }
+  .navbar {
+    width: 125%;
+  }
+  header li {
+    padding: 28px; 
+  }
+  .logo {
+    width: 62px;
+    position: absolute;
+    top: -10px;
+    left: 8px;
+  }
+  ul .fa-bars:before, .fa-navicon:before {
+    margin-left: 0px;
+    font-size: 25px;
+  }
+  .fa-solid, .fa-bars {
+    position: relative;
+    display: block;
+  }
+  .fa-bars:before, .fa-navicon:before {
+    color: rgb(212, 10, 10);
+    left: 110px;
+    bottom: -12px
+  }
+  .main {
+    width: 125%;
+    margin: 100px 0px 0px 0px;
+    padding-top: 50px;
+  }
+  .text-center{
+    margin-bottom: 0%;
+  }
+  h4 {
+    margin: -13px; 
+    margin-left: 51px;
+    margin-right: 49px;
+  }
+  .text-center h1 {
+    font-size: 50px;
+    padding-top: 28px;
+    margin-left: 50px;
+  }
+  .text-center h6 {
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin-left: 70px;
+  }
+  .text-center h4 {
+    font-size: 16px;
+    padding-top: 0px;
+    margin-right: -80px;
+    margin-left: 0px;
+    letter-spacing: 2px;
+  }
+  .text-center h4::before {
+    display: none;
+  }
+  .text-center h4::after {
+    display: none;
+  }
+  h5 {
+    margin-top: -30px;
+    margin-bottom: 30px;
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 4px;
+  }
+  .red {
+    position: absolute;
+    width: 386px;
+    top: 176px;
+    left: -26px;
+  }
+  #modelo {
+    width: 100%;
+    padding: 14px;
+  }
+  .one {
+    display: block;
+  }
+  .two {
+    display: block;
+  }
+  .two-2 {
+    display: block;
+  }
+  .label input {
+    width: 100%;
+    padding: 14px;
+  }
+  .color-red {
+    font-size: 40px;
+    margin-top: 40px;
+  }
+  p {
+    margin-left: 10px;
+  }
+  .label .name {
+    width: 100%;
+  }
+  .label #name {
+    width: 90%;
+  }
+  .label #last-name-father {
+    width: 90%;
+  }
+  .label #last-name-mother {
+    width: 90%;
+  }
+  .two-2 #email {
+    width: 90%;
+  }
+  .two-2 #number {
+    margin-left: 0;
+    width: 90%;
+  }
+  #Phone p {
+    margin-left: 10px;
+  }
+  .two-2 .phone {
+    margin-left: 10px;
+  }
+  .option {
+    margin-left: 0;
+  }
+  .three {
+    display: block
+  }
+  .three-chk p {
+    margin-left: 10px;
+  }
+  .three .cantidad {
+    margin-left: 10px;
+  }
+  .three #number {
+    margin-left: 0;
+    width: 90%;
+  }
+  .three #month {
+    margin-right: 0;
+    width: 90%;
+  }
+  .three .plazo {
+    margin-left: 10px;
+  }
+  .text-center-two {
+    margin-top: 0;
+  }
+  .color-red::after {
+    display: none;
+  }
+  .color-red::before {
+    display: none;
+  }
+  .w3-bar-item.w3-button {
+    padding: 14px;
+  }
+  .w3-bar.w3-black {
+    margin-left: 0;
+  }
+  .w3-bar-item.w3-button.w3-r {
+    margin-left: 0px;
+  }
+  .w3-bar-item.w3-button.w3-s {
+    margin-right:  0px;
+  }
+  .eighth label {
+    margin-left: 10px;
+  }
+  .eighth .text-center {
+    padding-top: 4px;
+    padding-bottom: 28px;
+  }
+  textarea {
+    width: 98%;
+    height: 84px;
+  }
+  .nineth .d-final {
+    display: block;
+  }
+  .nineth button {
+    width: 50%;
+    height: 46px;
+    margin-bottom: 26px;
+    margin-left: 75px;
+  }
+  .nineth div {
+    margin-bottom: 30px;
+  }
+  .nineth div label {
+    letter-spacing: 0.6px
+  }
+  .display-mobile {
+    display:none;
+  }
+  .display-desktop {
+    display: block;
+  }
+}
+  </style>  
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="navbar">
+        
+        <ul>
+          <li><img src="/img/logo.png" alt="logo" class="logo"></li>
+          <li class="lista">MODELOS</li>
+          <li class="lista">PRUEBA DE MANEJO</li>
+          <li class="lista cotizar">COTIZAR</li>
+          <li class="lista">PROMOCIONES</li>
+          <li class="lista">DISTRIBUIDORES</li>
+          <i class="fa-solid fa-bars"></i>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="text-center">
+    <h6>COTIZADOR</h6>
+    <h4 class="display-desktop">CITADINO, AVENTURERO, DEPORTIVO</h4>
+    <h4 class="display-mobile">ELIGE EL FIAT QUE VA CONTIGO</h4>
+    <h1>Elige el tuyo</h1>
+
+  </section>
+    <div>
+      <img src="./img/red.png" alt="red" class="red">
+    </div>
+  
+  <div class="main">
+    
+    <section class="section">
+      
+
+      <div class="first">
+        <div class="d-flex">
+          <form action="" class="form-one">
+            <div class="one">
+              <label for="text" class="label"><p>MODELO</p> 
+              <select name="modelo" id="modelo"><option value="value">SELECCIONA</option><option value="Fiat">500<option value="Fiat">500x</select></label>
+    
+              <label for="text" class="label"><p>VERSIÓN</p>
+              <select name="version" id="modelo"><option value="value">SELECCIONA</option></option><option value="Fiat">2021<option value="Fiat">2022</select></label>
+            </div>
+            
+            <div class="one">
+              <label for="text" class="label"><p>ESTADO</p>
+              <select name="estado" id="modelo"><option value="value">SELECCIONA</option></option><option value="Fiat">Anzoategui<option value="Fiat">Sucre</select></select></label>
+  
+              <label label for="Text" class="label"><p>DISTRIBUIDOR</p>
+              <select name="distribuidor" id="modelo"><option value="value">SELECCIONA</option></option><option value="Fiat">C.A<option value="Fiat">R.S</select></select></label>
+            </div>    
+          </form>
+        </div>
+      </div>
+      
+      <div class="second">
+        <div class="text-center-two">
+          <h2 class="color-red">Datos personales</h2>
+          <h5>ESCRIBE TUS DATOS PERSONALES</h5>
+        </div>
+      </div>
+      <form method="post" action="index.html" class="form-two">
+      <div class="third">
+        <div class="d-flex">
+          
+            <div class="two">
+              <label for="name" class="label"><p>NOMBRE(S)</p>
+              <input type="text" id="name" placeholder="ESCRIBE TU NOMBRE" required="" pattern="[a-zA-Z]+"> </label>
+  
+              <label for="last-name-father" class="label"><p>APELLIDO PATERNO</p>
+              <input type="text" id="last-name-father" placeholder="ESCRIBE TU APELLIDO" required="" pattern="[a-zA-Z]+"> </label>
+  
+              <label for="last-name-mother" class="label"><p>APELLIDO MATERNO</p>
+              <input type="text" id="last-name-mother" placeholder="ESCRIBE TU APELLIDO" required="" pattern="[a-zA-Z]+"></label>
+            </div>
+  
+            <div class="two-2"> 
+              <label for="email" class="label"><p>EMAIL</p> 
+              <input type="email" id="email" placeholder="CORREO@EMAIL.COM.MX" required=""></label>
+  
+              <label for="number" class="label"><p class="phone">TELÉFONO</p> 
+              <input type="number" id="number" placeholder="01 . 844 . 439 . 0654" required="" pattern="[0-9]+"></label>
+            </div>
+          
+        </div>
+      </div>
+
+      <div class="fourth">
+        <div class="contact">
+          <div class="d-flex">
+              
+              <div class="three-chk">
+                <div id="Phone" class="city">
+                  <p>DESEO SER CONTACTADO POR</p>
+                </div>
+                
+                <div id="Email" class="city" style="display:none">
+                  <p>Email</p>
+                </div>
+                
+                <div id="Ambos" class="city" style="display:none">
+                  <p>Number, Email</p>
+                </div>
+
+                <div class="w3-bar w3-black">
+                  <button class="w3-bar-item w3-button background-red" onclick="openCity('Phone')"><i class="fa-solid fa-phone"></i>Telefono</button>
+                  <button class="w3-bar-item w3-button" onclick="openCity('Email')"><i class="fa-solid fa-envelope"></i>Email</button>
+                  <button class="w3-bar-item w3-button" onclick="openCity('Ambos')">Ambas</button>
+                </div>
+
+                <script>
+                  function openCity(cityName) {
+                  var i;
+                  var x = document.getElementsByClassName("city");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                  }
+                  document.getElementById(cityName).style.display = "block";
+                }
+                </script>
+              </div>       
+          </div>
+        </div>
+      </div>
+
+      <div class="fifth">
+        <div class="text-center-two">
+          <h2 class="color-red">Formas de pago</h2>
+          <h5>PERSONALIZA TU COTIZACIÓN</h5>
+        </div>
+      </div>
+
+      <div class="sixth">
+        <div class="d-flex">          
+            <div class="three-chk">
+              <div id="Contado" class="option">
+                <p>ELIGE TU TIPO DE PAGO</p>
+              </div>
+              
+              <div id="Credito" class="option" style="display:none">
+                <p>ELIGE TU TIPO DE PAGO</p>
+              </div>
+
+              <div class="w3-bar w3-black">
+                <button class="w3-bar-item w3-button w3-r" onclick="openCity('Contado')">Contado</button>
+                <button class="w3-bar-item w3-button w3-s" onclick="openCity('Credito')">Credito</button>
+              </div>
+
+              <script>
+                function openCity(cityName) {
+                var i;
+                var x = document.getElementsByClassName("option");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                document.getElementById(cityName).style.display = "block";
+              }
+              </script>
+
+            </div>           
+            
+            <div class="three">
+              <label for="number" class="label"><p class="cantidad">CANTIDAD DE ENGANCHE</p>
+              <input minlength="4" maxlength="9" type="number" id="number" placeholder="80,000.00"></label>
+        
+              <label for="month" class="label"><p class="plazo">PLAZO</p>
+              <input type="text" id="month" placeholder="72 MESES"></label>
+            </div>
+        </div>
+      </div>
+
+      <div class="seventh">
+        <div class="text-center-two">
+          <h2 class="color-red">Comentarios</h2>
+          <h5>NOS IMPORTAN TUS COMENTARIOS</h5>
+        </div>   
+      </div>
+
+      <div class="eighth">
+        <div >
+          <label class="text-center-two" for="description" class="label">¿DUDAS?¿COMENTARIOS?</label><br/>
+          <div class="text-center"><textarea name="description" id="description" cols="71" rows="10">ESCRÍBENOS</textarea></div>
+          
+        </div>
+      </div>
+
+      <div class="nineth">
+        <div>
+          <div class="d-final">
+            <div>
+              <label for=""><input type="checkbox" id="cbox4" class="font" value="sixth-checkbox">He leído y acepto el <u>aviso de privacidad</u> </label><br/>
+              <label for=""><input type="checkbox" id="cbox5" class="font" value="seventh-checkbox">No deseo recibir promociones</label>     
+            </div>
+            
+            <div class="d-flex-button">
+              <button type="submit">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </form>
+    </section>
+
+  </div>
+
+</body>
+</html>
